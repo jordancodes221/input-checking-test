@@ -177,7 +177,7 @@ func InputOK(incomingBookAsMap map[string]interface{}) (error) { // the request 
 
 		if hasOnHoldCustomerID {
 			// We know ohid is provided. Ensure it is a string
-			ohid, ohidIsString := incomingBookAsMap["onholdcustomerid"].(string)
+			ohid, ohidIsString := incomingBookAsMap["onholdcustomerid"].(string) // ohid means on-hold id
 			if !ohidIsString {
 				return errors.New("On-hold customer ID provided is not of type string.")
 			}
@@ -198,7 +198,7 @@ func InputOK(incomingBookAsMap map[string]interface{}) (error) { // the request 
 
 		if hasCheckedOutCustomerID {
 			// We know ohid is provided. Ensure it is a string
-			coid, coidIsString := incomingBookAsMap["checkedoutcustomerid"].(string)
+			coid, coidIsString := incomingBookAsMap["checkedoutcustomerid"].(string) // coid means checked-out id
 			if !coidIsString {
 				return errors.New("Checked-out customer ID provided is not of type string.")
 			}
